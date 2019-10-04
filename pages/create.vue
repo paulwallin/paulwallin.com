@@ -2,7 +2,7 @@
   <div class="container">
     <h1>About</h1>
     <p>
-      Testing NUXT.js with animated transitions
+      Testing NUXT.js with animated transitions on netlify
     </p>
   </div>
 </template>
