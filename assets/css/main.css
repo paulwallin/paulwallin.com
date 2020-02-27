@@ -1,10 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
+:root {
+  --space-lblue: #80BDF2;
+  --space-blue: #4A6D8C;
+  --space-ddblue: #223240;
+  --space-tblue: #A2F2F2;
+  --space-black: #0D0D0D;
+}
 body {
   font-family: 'Open Sans';
-  background-color: #efefef;
+  background: url(https://wallin.fi/paul/assets/img/space_bg_1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: var(--space-lblue);
 }
 .container {
   text-align: center;
@@ -34,7 +45,7 @@ body {
       overflow: visible;
     }
     a {
-      color: #39b982;
+      color: var(--space-blue);
       font-weight: 600;
       background-color: transparent;
     }
@@ -51,11 +62,13 @@ body {
       display: flex;
       align-items: center;
       font-family: 'Pacifico';
+      color: var(--space-tblue);
     }
     h1 {
       font-size: 50px;
       font-weight: 700;
       font-family: 'Pacifico';
+      text-align: center;
     }
     h2 {
       font-size: 38px;
@@ -88,45 +101,27 @@ body {
       font-size: 20px;
     }
     .-text-primary {
-      color: #39b982;
+      color:  var(--space-lblue);
     }
     .-text-base {
-      color: #000;
+      color:  var(--space-lblue);
     }
     .-text-error {
       color: tomato;
     }
     .-text-gray {
-      color: rgba(0, 0, 0, 0.5);
+      color:  var(--space-black);
     }
     .-shadow {
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
     }
-    .badge {
-      display: inline-flex;
-      height: 26px;
-      width: auto;
-      padding: 0 7px;
-      margin: 0 5px;
-      background: transparent;
-      border-radius: 13px;
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 26px;
-    }
-    .badge.-fill-gradient {
-      background: linear-gradient(to right, #16c0b0, #84cf6a);
-      color: #fff;
-    }
-
-    
     /*= Brand
     ****************/
 .brand {
   font-family: 'Pacifico', sans-serif;
   font-weight: 700;
   font-size: 1.5em;
-  color: #39b982;
+  color: var(--space-blue);
   text-decoration: none;
 }
 
@@ -141,12 +136,14 @@ body {
 .nav .nav-item {
   box-sizing: border-box;
   margin: 0 5px;
+  padding: 5px;
+  text-align: center;
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
 .nav .nav-item.router-link-exact-active {
-  color: #39b982;
-  border-bottom: solid 2px #39b982;
+  color: var(--space-tblue);
+  border-bottom: solid 2px var(--space-blue);
 }
 .nav a {
   display: inline-block;
