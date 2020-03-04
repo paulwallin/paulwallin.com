@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-  <article>
-    <h1>About</h1>
-    <p>
-      Testing NUXT.js with animated transitions on netlify
-    </p>
+    <article>
+      <h1>About</h1>
+      <p>
+        Testing NUXT.js with animated transitions on netlify
+      </p>
     </article>
   </div>
 </template>
