@@ -1,6 +1,6 @@
+let development = process.env.NODE_ENV !== 'production'
 
 export default {
-  mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -49,6 +49,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseURL: development ? 'http://localhost:5000/skills' : 'https://paulwallin.com/data/skills'
   },
   /*
   ** Build configuration

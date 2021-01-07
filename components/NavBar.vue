@@ -7,8 +7,8 @@
       <nuxt-link to="/">
         Hello!
       </nuxt-link>
-      <nuxt-link to="/about">
-        About
+      <nuxt-link to="/skills">
+        skills
       </nuxt-link>
     </nav>
   </div>

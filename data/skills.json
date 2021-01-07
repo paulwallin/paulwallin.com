@@ -1,0 +1,40 @@
+{
+  "skills": [
+    {
+      "fluents": [
+        {
+          "id": 1,
+          "title": "HTML",
+          "content": ""
+        },
+        {
+          "id": 2,
+          "title": "CSS",
+          "content": ""
+        },
+        {
+          "id": 3,
+          "title": "Design",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "good": [
+        {
+          "id": 1,
+          "title": "some comment"
+        }
+      ]
+    },
+    {
+      "links": [
+        {
+          "id": 1,
+          "title": "Linkedin",
+          "url": "https://linkedin.com"
+        }
+      ]
+    }
+  ]
+}
