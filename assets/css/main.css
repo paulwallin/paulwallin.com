@@ -83,9 +83,10 @@ h1 {
 .skills h1 {
   font-size: 3rem;
   font-weight: 500;
-  margin: .5rem;
-  padding: .5rem;
+  margin: .5rem 0;
+  padding: .5rem 0;
 }
+
 .index h1::first-letter {
   letter-spacing: -0.6rem;
 }
@@ -181,11 +182,11 @@ small {
   text-align: center;
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
-}
+}/*
 .nav .nav-item.router-link-exact-active {
-  /*color: var(--space-tblue);
-  border-bottom: solid 2px var(--space-blue);*/
-}
+  color: var(--space-tblue);
+  border-bottom: solid 2px var(--space-blue);
+}*/
 .nav a {
   display: inline-block;
   padding: 5px 15px;
