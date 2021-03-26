@@ -1,16 +1,16 @@
 <template>
-  <div class="container skills">
+  <div class="container about">
     <section>
       <article class="header">
-        <h1>Skills</h1>
+        <h1>About</h1>
       </article>
       <article class="content">
-        <h1>What I do</h1>
-        <h3>List of things I can do</h3>
+        <h1>About me</h1>
+        <h3>Who is this guy?</h3>
       </article>
       <article class="content">
-        <h1>What I've done</h1>
-        <h3>Examples</h3>
+        <h1>Contact</h1>
+        <h3>Form here</h3>
       </article>
     </section>
   </div>

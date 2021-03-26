@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+:root {
+   /* Color Theme Swatches in Hex */
+--pw-black: rgb(26, 26, 26);
+--pw-white: #f2f2f2;
+--pw-pink: #ED5A77; 
+--pw-light-pink: #D67EA5; 
+--pw-green: #39BB6C; 
+--pw-blue:#44BED4;
+--pw-orange: #F09067; 
+
+/* Color Theme Swatches in RGBA 
+.pw-pink: rgba(237,90,119, 1);
+.pw-light-pink: rgba(214,126,165, 1);
+.pw-green: rgba(57,187,108, 1);
+.Festive-Gradient-4-rgba: rgba(68,190,212, 1);
+.Festive-Gradient-5-rgba: rgba(240,144,103, 1);
+*/
+  font-family: "Open Sans";
+  background:     rgba(245, 90, 66, 1);
+
+  background: radial-gradient(
+    farthest-corner at top,
+    #30799c 8%,
+    #264d60 70%
+  );
+  color: var(--pw-white);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+#app {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  min-height: 100vh;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+a {
+  color: var(--pw-black);
+  font-weight: 600;
+  background-color: transparent;
+}
+
+img {
+  border-style: none;
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Pacifico";
+  /*color: var(--space-tblue);*/
+  color: var(--pw-black);
+}
+h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1;
+  font-family: "Pacifico";
+  text-align: center;
+  letter-spacing: 0.1rem;
+  width: 100%;
+  text-shadow: 1px 2px 2px var(--pw-black);
+  color: var(--pw-white);
+  margin-bottom: .5rem;
+}
+.skills article h1, .about article h1 {
+  color: var(--pw-orange);
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 1rem 0;
+  padding: .5rem 0;
+  text-shadow: none;
+}
+
+.index h1::first-letter {
+  letter-spacing: -0.6rem;
+}
+h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--pw-white);
+  text-shadow: 1px 2px 2px var(--pw-black);
+}
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 21px;
+  font-weight: 700;
+}
+h5 {
+  font-size: 16px;
+  font-weight: 700;
+}
+h6 {
+  font-size: 15px;
+  font-weight: 700;
+}
+p, ul {
+  color: #222222;
+}
+article ul { 
+  margin: 0;
+  padding: 1rem;
+  display: flex; 
+  flex-wrap: wrap;
+  list-style: none; 
+  justify-content: flex-start;
+  
+}
+article li { 
+  display: inline; 
+  flex: 1;
+  padding: 5px; 
+  margin: 2px;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+small {
+  font-size: 80%;
+}
+
+.-text-primary {
+  color: var(--space-lblue);
+}
+.-text-base {
+  color: var(--space-lblue);
+}
+.-text-error {
+  color: tomato;
+}
+.-text-gray {
+  color: var(--space-black);
+}
+.-shadow {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+}
+
+
+
+/*=LAYOUT
+**********************/
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: calc(100% - 60px);
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+article {
+  position: relative;
+  width: 100%;
+}
+.index > article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+      height: 300px
+  }
+}
+
+@media (min-width: 620px) {
+  .container section {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  section article {
+    min-height: 300px;
+  }
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+  .container section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =PAGE animations 
+***********************/
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+.bounce-enter-active {
+  animation: bounce-in 0.8s;
+}
+.bounce-leave-active {
+  animation: bounce-out 0.5s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

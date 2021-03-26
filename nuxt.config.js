@@ -1,4 +1,4 @@
-let development = process.env.NODE_ENV !== 'production'
+const development = process.env.NODE_ENV !== 'production'
 
 export default {
   /*
@@ -23,7 +23,9 @@ export default {
   ** Global CSS
   */
   css: [
-    '~/assets/css/main.css'
+    '~/assets/css/main.css',
+
+    '~/assets/scss/main.scss'
   ],
   /*
   ** Plugins to load before mounting the App
