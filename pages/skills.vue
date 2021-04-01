@@ -20,8 +20,17 @@
         </div>
       </article>
       <article class="content">
-        <h1>More to come!</h1>
-        <h3>eg. Examples</h3>
+        <h1>Links</h1>
+        <ul>
+          <li><a href="https://github.com/paulwallin?tab=repositories" title="GitHub">Github</a><br>(I use Github for teaching (classroom). I published a few projects I’m currently working on (this portfolio and a React-site)</li>
+          <li><a href="https://codepen.io/paulwallin/collections/public" title="codepen">Codepen</a><br>I use codepen for fun, testing and examples for school</li>
+          <li><a href="https://vigorous-jepsen-12eb09.netlify.app/" title="Arcada Nova">Arcada Nova</a><br>(Prototype, Nuxt &amp; vuetify, Netlify CMS in progress)
+</li>
+          <li><a href="https://www.arcadahallen.fi/" title="Arcadahallen">Arcadahallen</a><br> uppgrade with webshop ready to publish</li>
+          <li><a href="https://www.theexpected.net/" title="the Expected">The Expected </a><br> Our band, New site with React-frontend in progress (see github)</li>
+          <li><a href="https://wallin.fi/playground/portfolio/" title="Old portfolio">10+ yeas old portfolio</a><br>that I found in my archives... ;).
+</li>
+        </ul>
       </article>
     </section>
   </div>
