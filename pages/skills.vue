@@ -20,17 +20,37 @@
         </div>
       </article>
       <article class="content">
-        <h1>Links</h1>
-        <ul>
-          <li><a href="https://github.com/paulwallin?tab=repositories" title="GitHub">Github</a><br>(I use Github for teaching (classroom). I published a few projects I’m currently working on (this portfolio and a React-site)</li>
-          <li><a href="https://codepen.io/paulwallin/collections/public" title="codepen">Codepen</a><br>I use codepen for fun, testing and examples for school</li>
-          <li><a href="https://vigorous-jepsen-12eb09.netlify.app/" title="Arcada Nova">Arcada Nova</a><br>(Prototype, Nuxt &amp; vuetify, Netlify CMS in progress)
-</li>
-          <li><a href="https://www.arcadahallen.fi/" title="Arcadahallen">Arcadahallen</a><br> uppgrade with webshop ready to publish</li>
-          <li><a href="https://www.theexpected.net/" title="the Expected">The Expected </a><br> Our band, New site with React-frontend in progress (see github)</li>
-          <li><a href="https://wallin.fi/playground/portfolio/" title="Old portfolio">10+ yeas old portfolio</a><br>that I found in my archives... ;).
-</li>
-        </ul>
+        <div>
+          <h1>Backend</h1>
+          <div class="skill-list">
+            <div v-for="skill in backendSkills" :key="skill.title">
+              <h3>
+                {{ skill.title }}
+              </h3>
+              <p>
+                {{ skill.content }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="content">
+        <div>
+          <h1>Other...</h1>
+          <div class="skill-list">
+            <div v-for="skill in otherSkills" :key="skill.title">
+              <h3>
+                {{ skill.title }}
+              </h3>
+              <p>
+                {{ skill.content }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="content">
+        <h1>More to come...</h1>
       </article>
     </section>
   </div>
@@ -41,19 +61,19 @@ export default {
     skills: [
       {
         title: 'HTML',
-        content: 'Sturucte and semantics',
+        content: 'Sturucte and semantics, usability and accessibility makes a difference',
         type: 1
       },
       {
         title: 'CSS',
         content:
-          'From layout to selectors from the farest corners. I do SCSS and testing out BEM for better structure',
+          'From CSS grid and flex layouts to selectors from the farest corners. I do SCSS and sometimes BEM for better structure',
         type: 1
       },
       {
         title: 'JS',
         content:
-          'In the last couple of years I\'ve been working a lot on my JS-skills. God bases in Vanilla (>ES6) and my prefered library, Vue. But due to jobmarket I\'ve pick up React more seariously',
+          'In the last couple of years I\'ve been working a lot on my JS-skills so I can teach the fundementals and move forward to all the hip libraries. Good bases in Vanilla (>ES6) and my prefered library, Vue. But due to the jobmarket demand I\'ve also picked up React',
         type: 1
       },
       {
@@ -71,13 +91,13 @@ export default {
       {
         title: 'Teaching',
         content:
-          'I\'ve been teaching programming for 10 years. My main subject is web developement, in which I\'ve bundled HTML, CSS, JS with invorements from Gith (classroom), Gulp and webpack, NPM/Yarn, frontend libraries Bootstrap, Material design, JSON and APIs, VUe and React',
+          'I\'ve been teaching programming for 10 years. My main subject is web development, in which I\'ve bundled HTML, CSS, JS with environments from Gih (classroom), Gulp and webpack, NPM/Yarn, frontend libraries Bootstrap, Design systems, JSON and APIs, Vue and React',
         type: 3
       },
       {
         title: 'Adobe',
         content:
-          'I know my way round Adobe products. PS, Ai and Xd to name few.',
+          'I know my way round Adobe products. PS, Ai and Xd to name a few.',
         type: 3
       }
     ]
@@ -90,6 +110,20 @@ export default {
         return (item.type === 1)
       })
       return frontendSkills
+    },
+    backendSkills () {
+      const skills = this.skills
+      const backendSkills = skills.filter((item) => {
+        return (item.type === 2)
+      })
+      return backendSkills
+    },
+    otherSkills () {
+      const skills = this.skills
+      const otherSkills = skills.filter((item) => {
+        return (item.type === 3)
+      })
+      return otherSkills
     }
   }
 }
@@ -116,7 +150,7 @@ article.header {
   align-items: center;
   justify-content: center;
   grid-column: span 1;
-  grid-row: span 2;
+  grid-row: span 4;
   h1 {
     color: var(--pw-white);
   }
@@ -147,6 +181,6 @@ article.content {
   justify-content: space-around;
   div { width: 200px}
   h3 { font-size: 1rem; }
-  p { font-size: .9rem; }
+  p { font-size: .9rem; text-align: justify; }
 }
 </style>
